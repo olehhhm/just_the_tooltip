@@ -207,7 +207,7 @@ class _JustTheTooltipEntryState extends _JustTheTooltipState<Widget> {
 
   @override
   void didUpdateWidget(covariant JustTheInterface oldWidget) {
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) {
       _updateEntries();
     });
 
